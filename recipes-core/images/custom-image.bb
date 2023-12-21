@@ -13,4 +13,11 @@ IMAGE_ROOTFS_EXTRA_SPACE:append = "${@bb.utils.contains("DISTRO_FEATURES", "syst
 
 IMAGE_INSTALL += " \
     timer \
+    flutter-embedder-minimal \
 "
+#
+# # Build wayland
+# DISTRO_FEATURES:append = " wayland"
+#
+# # Download wayland
+# CORE_IMAGE_EXTRA_INSTALL += "wayland weston"
